@@ -1,0 +1,86 @@
+{% extends 'exec_base.html' %}
+
+
+{% block body %}
+
+<style>
+
+    @media (max-width: 61.938em) {
+            .row1 {
+               text-align: center;
+            }
+
+            .r2 {
+                display: flex;
+                justify-content: center;
+                margin-left :-0.3em;
+                margin-bottom: 1em;
+            }
+
+            .card {
+                width: 90vw;
+            }
+
+        }
+
+    @media (min-width: 62em) {
+           .r2 {
+               margin-left: 15vw;
+               transform: scale(0.8,0.8);
+               font-size: 1.3rem;
+        }
+    }
+
+           .box2{
+               border-radius: 14px;
+            }
+
+            #card-col1{
+                margin-left: 40px;
+                font-weight: 500;
+                color: #15A7A7;
+            }
+
+            #card-col2{
+                margin-left: 50px;
+                font-weight: 500;
+                color: #616767;
+            }
+
+            #card-col3{
+                margin-left: 86px;
+                font-weight: 500;
+                color: #15A7A7;
+            }
+
+            a{
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+</style>
+
+<h5 class="page_head">My Tasks</h5>
+{%  for product in product %}
+<div class="row  r2">    
+    <a href="{% url 'exec_productdetails' product.id %}">   
+        <div class="card shadow bg-white box2">
+            <div class="card-body">
+                <div class="row row1"> 
+                    <div class="col-12 col-lg-3">   
+                        <img src="/static/images/circle.png" width="20" height="20" style="margin-left: 5px"> 
+                        <label for="" id="card-col1">{{ product.productname }}</label> 
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <label for="" id="card-col2">Date {{ product.date }}</label>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <label for="" id="card-col3">Target {{ product.target }}</label>
+                    </div>                  
+                </div> 
+            </div> 
+        </div>
+    </a> 
+</div>
+{% endfor %}
+{% endblock %}

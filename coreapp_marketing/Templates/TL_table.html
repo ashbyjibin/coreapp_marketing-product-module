@@ -1,0 +1,40 @@
+{% extends 'TL_base.html' %}
+
+
+{% block body %}
+
+<style>
+
+    @media (max-width: 61.938em) {
+
+            .ct1 {
+                display: flex ;
+                justify-content: center;
+            }
+
+            .table {
+                width: 90vw;
+                text-align: center;
+            }
+        }
+
+    @media (min-width: 992px) {
+        .table {
+            margin-left: 10vw;
+            text-align: center;
+            transform: scale(0.8,0.8);
+        }
+    }
+</style>
+<h5 class="page_head">My Tasks</h5>
+
+
+<table class="table table-primary table-bordered">
+    <tr>
+        <th>Test</th>
+        <th>Test</th>
+        <th>Test</th>
+    </tr>
+</table>
+
+{% endblock %}

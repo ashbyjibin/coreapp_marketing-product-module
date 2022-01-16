@@ -1,0 +1,61 @@
+{% extends 'TL_base.html' %}
+
+
+{% block body %}
+
+<style>
+
+    @media (max-width: 61.938em) {
+      .page_head {
+                position: relative;
+                top: -23vh;
+                }
+    }
+
+    @media (min-width: 62em) {
+    .r1 {
+        transform: scale(0.8,0.8);
+        font-size: 1.3rem;
+    }
+}
+</style>
+
+<h5 class="page_head">My Tasks</h5>
+<div class="row r1 row-cols-1 row-cols-lg-3 g-4 text-center">
+    <div class="col col1">
+      <div class="card h-100 cds">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Something</p>
+        </div>
+      </div>
+    </div>
+    <div class="col col1">
+      <div class="card h-100 cds">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Something</p>
+        </div>
+      </div>
+    </div>
+    <div class="col col1">
+      <div class="card h-100 cds">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Something</p>
+        </div>
+      </div>
+    </div>
+    <div class="col col1">
+      <div class="card h-100 cds">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Something</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+

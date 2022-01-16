@@ -1,0 +1,68 @@
+{% extends 'exec_base.html' %}
+
+
+{% block body %}
+
+<style>
+
+    @media (max-width: 61.938em) {
+
+        .ct1 {
+            display: flex ;
+            justify-content: center;
+            }
+        }
+      
+
+        .card {
+            width: 90vw;
+            text-align: justify;
+            font-size: 1.27rem;
+            margin-left :-2.5rem;
+        }
+
+
+        .pt-20{
+            padding-top: 20px;
+        }
+            
+
+        .btn{
+            background-color: #04BEFE;
+            box-shadow: none;
+            float: right;
+            border: none;
+            color: #ffffff;
+        } 
+                                                                                                                                                                 
+       
+    @media (min-width: 62em) {
+        .card {
+            margin-left: 7vw;
+            transform: scale(0.8,0.8);
+            font-size: 1.3rem;
+        }
+    }
+
+        
+        
+</style>
+<h5 class="page_head">My Tasks</h5>
+
+<div class="row">
+    <div class="card">
+        <div class="card-body">
+            <h5>Project Name: {{ product.productname }} </h5>
+            <h5>Posted Date: {{ product.date }} </h5>
+            <h5>Target: {{ product.target }} </h5>
+            <h5 class="pt-20">Description</h5>
+            <p> {{ product.description }} </p>
+            <a  href="{% url 'exec_productdata' product.id %}">
+                <button type="submit"  class="btn">View Datas</button>
+            </a>
+       
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'TL_base.html' %}
+
+
+{% block body %}
+
+<style>
+
+    @media (max-width: 61.938em) {
+            .row1 {
+               text-align: center;
+            }
+
+            .r2 {
+                display: flex;
+                justify-content: center;
+            }
+
+            .card {
+                width: 48.5vw;
+            }
+
+            .page_head {
+                position: relative;
+                top: -23vh;
+                }
+        }
+
+    @media (min-width: 62em) {
+        .r2 {
+            margin-left: 15vw;
+            transform: scale(0.8,0.8);
+            font-size: 1.3rem;
+        }
+    }
+</style>
+<h5 class="page_head">My Tasks</h5>
+
+<div class="row  r2 mt-4">
+    <div class="card">
+        <div class="card-body">
+            <div class="row row1">
+                <div class="col-12 col-lg-3">
+                    <label for="">Manage Zone</label> 
+                </div>
+                <div class="col-12 col-lg-3">
+                    <label for="">Date 12/7/2021</label>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <label for="">Target: 1000</label>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
+
+<div class="row  r2 mt-4">
+    <div class="card">
+        <div class="card-body">
+            <div class="row row1">
+                <div class="col-12 col-lg-3">
+                    <label for="">Manage Zone</label> 
+                </div>
+                <div class="col-12 col-lg-3">
+                    <label for="">Date 12/7/2021</label>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <label for="">Target: 1000</label>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
+
+{% endblock %}

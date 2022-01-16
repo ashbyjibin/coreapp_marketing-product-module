@@ -1,0 +1,49 @@
+{% extends 'TL_base.html' %}
+
+
+{% block body %}
+
+<style>
+
+    @media (max-width: 61.938em) {
+
+            .ct1 {
+                display: flex ;
+                justify-content: center;
+            }
+
+            .card {
+                width: 90vw;
+                text-align: justify;
+                font-size: 1.27rem;
+            }
+
+            
+        }
+
+    @media (min-width: 62em) {
+        .card {
+            margin-left: 7vw;
+            transform: scale(0.8,0.8);
+            font-size: 1.3rem;
+        }
+    }
+</style>
+<h5 class="page_head">My Tasks</h5>
+
+<div class="row">
+    <div class="card">
+        <div class="card-body">
+            <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nam ipsam cumque quo aliquid eveniet repellendus unde accusantium, mollitia doloremque dolorum fugit facere? Fuga culpa, perferendis fugit assumenda animi itaque!
+
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt perferendis pariatur dicta aliquam voluptatum voluptatibus voluptatem molestiae minima nemo dignissimos mollitia ab, autem consequatur et ipsa sit. Voluptatibus, ex fugit.
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores architecto quibusdam recusandae neque iusto cum sit tempore dolor laudantium voluptatum, quaerat adipisci amet provident ullam tempora eaque unde, animi pariatur.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,159 @@
+{% extends 'exec_base.html' %}
+
+
+{% block body %}
+
+<style>
+
+    @media only screen and (max-width: 760px),
+    (min-device-width: 768px) and (max-device-width: 1024px){
+
+        table, thead, tbody, th, td, tr { 
+		    display: block; 
+	    }
+
+
+        th { 
+		    position: absolute;
+		    top: -9999px;
+		    left: -999px;
+	    }
+
+
+        tr { 
+            border: 1px solid #ccc;
+        }
+    
+	
+	    td { 
+		    border: none;
+		    border-bottom: 1px solid #eee; 
+		    position: relative;
+	    }
+
+	
+	    td:before { 
+		    position: absolute;
+		    top: 6px;
+		    left: 6px;
+		    width: 45%; 
+		    padding-right: 40%; 
+		    white-space: nowrap;
+	    }
+
+	
+        td:nth-of-type(1):before { content: "No"; }
+	    td:nth-of-type(2):before { content: "Name"; }
+	    td:nth-of-type(3):before { content: "Email id"; }
+	    td:nth-of-type(4):before { content: "Phone number"; }
+	    td:nth-of-type(5):before { content: "Location"; }
+	    td:nth-of-type(6):before { content: "Status"; }
+
+
+        td{
+           text-align:justify;
+           text-indent:30%;
+        }
+
+
+        td{
+            margin-right: -50vw;  
+        }
+
+    }
+
+
+
+        .table {
+           text-align: left;
+           text-indent:2%;
+           transform: scale(0.8,0.8);
+        }
+
+
+        h5{
+           font-weight: bold;
+           font-size: 16px;
+        }
+       
+        a{
+           cursor: pointer;
+        }
+
+       .btn{
+            background-color: #04BEFE;
+            border: none;
+            color: #ffffff;
+            box-shadow: none;
+        }
+
+        h5{
+            color: #15A7A7;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .box4{
+            border-radius:12px;
+            width:80%;
+            margin-left: 16.5vw;
+        }
+
+        .text-transform{
+            text-transform: none;
+        }
+
+</style>
+
+<h5 class="page_head text-transform">My Tasks</h5>
+
+<div class="container-fluid shadow bg-white py-5 box4">
+    <table class="table table-bordered table-hover">
+        <tbody>
+            <tr style="border-bottom: 2px solid #ccccb3">
+                <th><h5>No</h5></th>
+                <th><h5>Name</h5></th>
+                <th><h5>Email id</h5></th>
+                <th><h5>Phone number</h5></th>
+                <th><h5>Location</h5></th>
+                <th><h5>Status</h5></th>
+            </tr> 
+            {%  for member in member %}
+            <tr>
+                <td>{{member.id}}</td>
+                <td>{{member.name}}</td>
+                <td>{{member.email}}</td>
+                <td>{{member.phno}}</td>
+                <td>{{member.location}}</td>
+                <td>
+                    
+                    {% if member.status == True %}
+                        Interested
+                    {% elif member.status == False %}
+                        Not Interested
+                    {% elif member.status == NULL %}
+                        <a href="{% url 'exec_savedc' member.id %}" id="status" style="color: #4d94ff">status</a>
+                    {% endif %}  
+                    
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</div>
+<div class="modal fade" id="myModal" style="top:10vh">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h5 class="text-center text-transform" style="color: #000000">Select the Status</h5>
+            </div>
+            <div class="text-center py-2">
+                <button type="button"  data-bs-dismiss="modal" class="btn" onclick='document.getElementById("status").innerHTML = "Interested"'>Interested</button>
+                <button type="button"  data-bs-dismiss="modal" class="btn" onclick='document.getElementById("status").innerHTML = "Not Interested"'>Not Interested</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

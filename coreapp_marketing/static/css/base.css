@@ -1,0 +1,151 @@
+body {
+    overflow-x: hidden;
+}
+
+.firstblock {
+    position: absolute;
+    width: 17vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+
+    background: linear-gradient(90deg, #4481EB 0%, #04BEFE 100%);
+}
+
+
+.logo {
+    position: relative;
+    top: 3%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size:  3rem;
+}
+
+.navlist {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 27vh;
+}
+
+.nav-link {
+    font-size: 1.25rem; 
+    color: white;
+    text-decoration: none;
+}
+
+.secondblock {
+    position: absolute;
+    width: 100vw;
+    height: 15vh;
+    left: 17vw;
+    top: 0px;
+    z-index: -1;
+
+background: url('../images/base_block.png');
+background-size: cover;
+}
+
+.secondblock1 {
+    position: absolute;
+    width: 100vw;
+    height: 15vh;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+
+background: url('../images/base_block.png');
+background-size: cover;
+}
+
+.ct1 {
+    margin-top: 30vh;   
+}
+
+.page_head {
+    position: absolute;
+    top: 17%;
+}
+
+@media (max-width: 61.938em) {
+    .secondblock {
+        position: absolute;
+        width: 100vw;
+        height: 23vh;
+        left: 0px !important;
+        top: 0px;
+        z-index: 1;
+
+    }
+
+    .secondblock1 {
+        left: 0;
+    }
+
+    .firstblock1 {
+        position: absolute;
+        width: 100vw;
+        height: 16vh;
+        left: 0px;
+        top: 14.8rem;
+        background: linear-gradient(90deg, #4481EB 0%, #04BEFE 100%);
+    }
+
+    .page_head {
+        position: absolute;
+        top: 20vh;
+        text-align:  center;
+    }
+
+    .labs {
+        text-decoration: none;
+        color: white;
+    }
+    
+
+    .ct1 {
+        margin-top: 40vh;
+
+
+    }
+    .r1 {
+        /* margin-left: auto; */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center;
+    }
+
+    .col1 {
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .cds {
+        width: 40vw;
+        
+    }
+
+
+}
+
+
+@media (min-width: 62em) {
+    .r1 {
+        margin-left: 20vw;
+    }
+
+    body {
+        overflow: hidden !important;
+    }
+
+    .page_head {
+        left: 18vw;
+        opacity: 0.36;
+        color: black;
+        font-size: 20px;
+        font-weight: 600;
+        }
+
+    
+}
